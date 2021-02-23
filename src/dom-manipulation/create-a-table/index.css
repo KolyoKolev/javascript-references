@@ -1,0 +1,45 @@
+:root {
+  --bodyColor: #131516;
+  --textColor: #e8e6e3;
+  --borderColor: #454a4d;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html,
+body {
+  height: 100%;
+}
+
+h1 {
+  font-size: 1.5rem;
+  margin-bottom: 25px;
+  word-wrap: wrap;
+  text-align: center;
+}
+
+#main-container {
+  height: 100%;
+  background: var(--bodyColor);
+  color: var(--textColor);
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+table {
+  width: 90%;
+  border: 3px solid var(--borderColor);
+  border-collapse: collapse;
+}
+
+th,
+td {
+  border: 1px solid var(--borderColor);
+  padding: 1rem;
+}
