@@ -37,6 +37,7 @@ const removeDuplicatesFromArrayOfObjects = testArrOfObjects.filter((obj) => {
 });
 
 // remove duplicates with for loop
+// for testing if it works call => removeDuplicatesWithForLoop([1, 2, 3, 4], [1, 2, 3, 4, 5]);
 function removeDuplicatesWithForLoop(arr1, arr2) {
   let theArrayWhichHoldsTheNoDuplicates = [];
 
@@ -53,4 +54,18 @@ function removeDuplicatesWithForLoop(arr1, arr2) {
   }
 }
 
-// for testing if it works call => removeDuplicatesWithForLoop([1, 2, 3, 4], [1, 2, 3, 4, 5]);
+// remove duplicates of a single array using Object.keys
+// test data:
+// const testArray = [1, 23, 1, 24, 1, 123, 1, 12435];
+// removeDuplicatesUsingObjectKeys(testArray);
+function removeDuplicatesUsingObjectKeys(singleArray) {
+  let theObject = {};
+
+  for (let arrayItem of singleArray) {
+    theObject[arrayItem] = true;
+  }
+
+  const theArrayWithRemovedDuplicates = Object.keys(theObject);
+
+  return theArrayWithRemovedDuplicates;
+}
