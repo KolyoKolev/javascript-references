@@ -35,3 +35,22 @@ const removeDuplicatesFromArrayOfObjects = testArrOfObjects.filter((obj) => {
   idSet.add(obj.id);
   return !existingId;
 });
+
+// remove duplicates with for loop
+function removeDuplicatesWithForLoop(arr1, arr2) {
+  let theArrayWhichHoldsTheNoDuplicates = [];
+
+  for (let i = 0; i < arr1.length; i++) {
+    if (arr2.indexOf(arr1[i]) === -1) {
+      theArrayWhichHoldsTheNoDuplicates.push(arr1[i]);
+    }
+  }
+
+  for (let j = 0; j < arr2.length; j++) {
+    if (arr1.indexOf(arr2[j]) === -1) {
+      theArrayWhichHoldsTheNoDuplicates.push(arr2[j]);
+    }
+  }
+}
+
+// for testing if it works call => removeDuplicatesWithForLoop([1, 2, 3, 4], [1, 2, 3, 4, 5]);
