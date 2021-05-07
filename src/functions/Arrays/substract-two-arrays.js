@@ -4,7 +4,7 @@
 const testDataFirst = [1, 2, 3];
 const testDataSecond = [1, 2];
 
-function substractTwoArrays(a, b) {
+function substractTwoArraysSolutionOne(a, b) {
   const result = [];
 
   if (!b.length) {
@@ -20,5 +20,20 @@ function substractTwoArrays(a, b) {
   return result;
 }
 
-const res = substractTwoArrays(testDataFirst, testDataSecond);
-console.log(res);
+function substractTwoArraysSolutionTwo(a, b) {
+  return a.filter((item) => !b.includes(item));
+}
+
+const resSolutionOne = substractTwoArraysSolutionOne(
+  testDataFirst,
+  testDataSecond
+);
+
+console.log(resSolutionOne);
+
+const resSolutionTwo = substractTwoArraysSolutionOne(
+  testDataFirst,
+  testDataSecond
+);
+
+console.log(resSolutionTwo);
